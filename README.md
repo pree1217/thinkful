@@ -1,2 +1,0 @@
-# thinkful
-JS exercises README
