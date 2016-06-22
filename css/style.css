@@ -1,0 +1,82 @@
+
+/* global declarations */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.topNavigation > .content {
+	width: 970px;
+	height: 70px;
+	margin: 0 auto;
+}
+.introduction > .content{
+	width: 970px;
+	height: 70px;
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+}
+
+.main {
+	padding: 1em;
+	margin: 1em;
+}
+
+/* top navigation */
+.topNavigation{
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+
+.topNavigation .logo{
+	margin-left: 14px;
+	height: 4rem;
+}
+.topNavigation .links {
+	float:right;
+	color:#838994;
+}
+.topNavigation .links li {
+	display: inline-block;
+	padding:1em;
+}
+a:link{
+	text-decoration: none;
+	color:#808080;
+}
+a.active{
+	color: #4c5058;
+    font-weight: 500;
+}
+a.hover{
+	color:black;
+}
+
+/* second section */
+.introduction {
+    background-image: url('../images/background.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45.938rem;
+    margin-top:10em;
+}
+
+button {
+    border-style: none;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+}
+
+.cases .devices {
+    width: 20%;
+    display: inline-block;
+    /* styles to assist with debugging */
+    box-sizing: border-box;
+    height: 10em;
+    text-align: center;
+}
+
