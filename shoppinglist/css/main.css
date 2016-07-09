@@ -8,6 +8,7 @@
 	margin-top:5em;
 	position: relative;
 	height: 55em;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #itemsList {
@@ -17,8 +18,11 @@
 	border: 1px solid black;
 }
 
+.addItemsText {
+	width: 20em;
+}
+
 .addItems {
-	border:1px dotted black;
 	position: relative;
 	width: 41em;
 	padding: 1em;
@@ -26,4 +30,10 @@
 
 li {
 	line-height: 1.3em;
+}
+
+img {
+	width: 1.5em;
+	height: 2em;
+	vertical-align: middle;
 }

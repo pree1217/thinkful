@@ -6,6 +6,9 @@
     <title>Shopping List</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 
 <body>
@@ -13,25 +16,15 @@
         <div>
             <h1>Shopping List</h1>
         </div>
-      	<div class="addItems">Add items here...</div>
-        <div id="itemsList">
-            <ul style="list-style-type:none">
-                <li>Shampoo</li>
-                <li>Conditioner</li>
-                <li>Greeting Cards</li>
-            </ul>
+      	<div class="addItems">
+            <input class="addItemsText" id="txtAddItem" style="color:grey" type="text" value="Add items here ... " onclick="clearText()">
+            <button type="button" id="btnAdd" onclick="addItemToList()">Add</button>
         </div>
-        <div class="addItems">Items packed</div>
-        <div id="itemsList">
-            <ul style="list-style-type:none">
-                <li>Apples</li>
-                <li>Bananas</li>
+        <div class="itemsList">
+            <ul id="itemsListAdd" style="list-style-type:none">
             </ul>
         </div>
     </div>
-
-    <script src="scripts/app.js"></script>
-    <script src="http://code.jquery.com/jquery.min.js"></script>
 </body>
 
 </html>
