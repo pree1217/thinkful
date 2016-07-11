@@ -8,7 +8,7 @@ function addItemToList() {
 
 		if(item.val().length > 0){
 
-			$('#itemsListAdd').append('<li class="itemsListAdd"><input type="checkbox" onclick="strikeThroughItem(this)"> '+ item.val() +'<img src="trashcan.jpeg" /></li>');
+			$('#itemsListAdd').append('<li class="itemsListAdd"><input type="checkbox" onclick="strikeThroughItem(this)"> '+ item.val() +'<img src="images/trashcan.jpeg" /></li>');
 
 			$("img").click(function() {
 		    	$(this).closest('li').remove();
