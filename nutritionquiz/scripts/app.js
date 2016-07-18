@@ -90,7 +90,8 @@ function goToNextQuestion() {
 
 		if (elemNo > numQuestions) {
 			elemChoices.html('');
-			elemComplete.append("Great. You're done! You answered "+score+" out of "+numQuestions+" correct!");
+			elemComplete.append("Great. You're done!</br>");
+			elemComplete.append("You answered "+score+" out of "+numQuestions+" correct!");
 		} else {
 			$("#question"+elemNo).show();
 		}

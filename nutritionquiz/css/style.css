@@ -2,7 +2,6 @@
    Common Styles
 ---------------------------------------------------------------------------------*/
 html {
-	margin-top: 1.5em;
 	color:white;
 }
 
@@ -23,7 +22,13 @@ img {
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-.image {
+ul li {
+	list-style: none;
+	text-align: right;
+	display: inline;
+}
+
+.backsplash {
 	position: relative;
 }
 
@@ -50,17 +55,12 @@ img {
 .complete {
 	color: white;
     position: absolute;
-    bottom: 14em;
+    bottom: 13em;
     margin-right: 15em;
     margin-left: 15em;
     text-align: left;
 }
 
-ul li {
-	list-style: none;
-	text-align: right;
-	display: inline;
-}
 
 .submitAnswer {
     text-align: left;
@@ -70,8 +70,9 @@ ul li {
 	display: none;
 }
 
-.answer{
+.answer {
 	color:white;
 	margin-right: 10em;
 	margin-left: 10em;
+	font-size: .6em;
 }
