@@ -27,7 +27,7 @@ var objQuestions = [
 	    {
 	    	"question":"If you're looking for the most fiber in a loaf of bread, the operative words are ", 
 	    	"choices": ["unbleached", "enriched wheat flour","whole-wheat flour","twelve-grain"],
-	    	"answer": "(c) Whole-wheat flour contains the bran and the germ, and thus is rich in vitamins, minerals, and fiber. Wheat flour, whether bleached or unbleached, loses vitamins and minerals when it is refined. Even when it is enriched, only some—not all—of these nutrients are added back in. 'Twelve-grain' or 'seven-grain' may not mean anything, since the bread can still be mostly re-fined wheat ('white') flour. Most rye and pumpernickel contain little or no whole grain, but if you can find whole-grain versions, they are good, too.",
+	    	"answer": "(c) Whole-wheat flour contains the bran and the germ, and thus is rich in vitamins, minerals, and fiber. Wheat flour, whether bleached or unbleached, loses vitamins and minerals when it is refined. Even when it is enriched, only some—not all—of these nutrients are added back in. 'Twelve-grain' or 'seven-grain' may not mean anything, since the bread can still be mostly re-fined wheat ('white') flour. Most rye and pumpernickel contain little or no whole grain",
 	    	"correctAnswer": ["whole-wheat flour"]
 	    },
 	    {
@@ -53,9 +53,15 @@ function evaluateAnswer(arr,index) {
 
 	//for every element in arr, check if the element (in arr) is exactly equal to the correct 
 	//answers array at the index 'index'
-	var  isSame = (arr.length == arrAnswers.length) && arr.every(function(element, index) {
-	    return element === arrAnswers[index]; 
-	});
+	if(arr.length == 1){
+		//Support IE8 issue
+		var  isSame = (arr[0] == arrAnswers[0]);
+	} else {
+
+		var  isSame = (arr.length == arrAnswers.length) && arr.every(function(element, index) {
+		    return element === arrAnswers[index]; 
+		});
+	}
 
 	if(isSame){
 		score+=1;
@@ -100,7 +106,7 @@ function goToNextQuestion() {
 	$('input:checkbox').removeAttr('checked');
 }
 
-function loadQuiz(){
+function loadQuiz() {
 
 	for(var index in objQuestions) {
 		html='';

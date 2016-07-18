@@ -10,7 +10,11 @@ body {
 	width: 98%;
 	height: 98%;
 	margin: .5em auto;
-	font:1.8em 'Merienda One', Helvetica, sans-serif;
+	/*font:1.5em 'Merienda One', Helvetica, sans-serif;*/
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
 	background-color: #5E3C30;
 	text-align: center;
 }
@@ -32,7 +36,7 @@ ul li {
 	position: relative;
 }
 
- .button {
+.button {
 	color: white;
 	display:inline-block;
 	font:.5em 'Merienda One', Helvetica, sans-serif;
@@ -41,26 +45,26 @@ ul li {
 	padding-left: 2em;
 	padding-right: 2em;
 	background-color:#5E3C30;
- }
+}
 
 .choices {
 	color: white;
     position: absolute;
-    bottom: 4em;
-    margin-right: 15em;
-    margin-left: 15em;
+    bottom: 7em;
+    margin-right: 25em;
+    margin-left: 25em;
     text-align: left;
+    font-size: 1em;
 }
 
 .complete {
 	color: white;
     position: absolute;
-    bottom: 13em;
-    margin-right: 15em;
-    margin-left: 15em;
+    bottom: 15em;
+    margin-right: 20em;
+    margin-left: 25em;
     text-align: left;
 }
-
 
 .submitAnswer {
     text-align: left;
@@ -72,7 +76,7 @@ ul li {
 
 .answer {
 	color:white;
-	margin-right: 10em;
-	margin-left: 10em;
-	font-size: .6em;
+	margin-right: 20em;
+	margin-left: 20em;
+	font-size: .8em;
 }
