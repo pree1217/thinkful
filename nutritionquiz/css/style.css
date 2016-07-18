@@ -27,6 +27,17 @@ img {
 	position: relative;
 }
 
+ .button {
+	color: white;
+	display:inline-block;
+	font:.5em 'Merienda One', Helvetica, sans-serif;
+	border:1px solid #5E3C30;
+	padding:.5em;
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color:#5E3C30;
+ }
+
 .choices {
 	color: white;
     position: absolute;
@@ -39,7 +50,7 @@ img {
 .complete {
 	color: white;
     position: absolute;
-    bottom: 10em;
+    bottom: 14em;
     margin-right: 15em;
     margin-left: 15em;
     text-align: left;
