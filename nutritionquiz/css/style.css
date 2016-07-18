@@ -20,7 +20,7 @@ body {
 }
 
 img {
-	width: 60%;
+	width: 55%;
 	height: 55%;
 	opacity:.8;
     filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -51,8 +51,8 @@ ul li {
 	color: white;
     position: absolute;
     bottom: 7em;
-    margin-right: 25em;
-    margin-left: 25em;
+    margin-right: 28em;
+    margin-left: 28em;
     text-align: left;
     font-size: 1em;
 }
@@ -62,7 +62,7 @@ ul li {
     position: absolute;
     bottom: 15em;
     margin-right: 20em;
-    margin-left: 25em;
+    margin-left: 28em;
     text-align: left;
 }
 
@@ -78,5 +78,5 @@ ul li {
 	color:white;
 	margin-right: 20em;
 	margin-left: 20em;
-	font-size: .8em;
+	font-size: 14px;
 }
