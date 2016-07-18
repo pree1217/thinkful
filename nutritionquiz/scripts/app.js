@@ -132,37 +132,3 @@ $(document).ready(function() {
 	$("#question"+elemNo).show();
 
 });
-
-
-/*
-
-var count = 1;
-
-var ping = function(cb){
-	setTimeout(function()
-		{
-			console.log("P....... " + count * 200 + "ms");
-			count++;
-			cb(ping);
-		},200);
-}
-
-var pong = function(cb){
-	setTimeout(function()
-		{
-			console.log(".......P "+ count * 200 + "ms");
-			count++;
-			cb(pong);
-		},200);
-}
-
-
-var smash_timeout = 1030;
-var smash = function(){
-	console.log("<-------------------- " + smash_timeout + "ms");
-};
-
-ping(pong);
-setTimeout(smash,smash_timeout);
-
-*/
