@@ -2,25 +2,35 @@ var myData = [];
 var html = '';
 
 var showResults = function(myData) {
-
+	html='';
+	$("#search-results").html(html);
 	$.each(myData, function(index, value) {
 		html+= '<p>' + value.Title + '</p>';
 	});
-
 	$("#search-results").html(html);
 }
 
-$(function(){
+var getSearchRequest = function(searchTerm){
+	//$.getJSON('http://www.omdbapi.com/?s='+searchTerm+'&r=json',function(data){
+	//	showResults(data.Search);
+	//});
 
-	$.getJSON('http://www.omdbapi.com/?s=Star%20Wars&r=json', function(data){
+	var params = {
+		s: searchTerm,
+		r: 'json'
+	};
+	url = 'http://www.omdbapi.com';
+
+	$.getJSON(url,params, function(data){
 		showResults(data.Search);
-	});
+	})
+}
 
-	$("#movies-form").submit(function(event){
-		//alert("hi");
+$(function() {
+	$("#movies-form").submit(function(event) {
 		event.preventDefault();
-		//var searchTerm = $("search-term").val();
-		//console.log(searchTerm);
+		var searchTerm = $("#search-term").val();
+		getSearchRequest(searchTerm);
 	});
 
 });

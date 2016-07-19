@@ -124,7 +124,22 @@ function loadQuiz() {
 
 /* document load activity */
 //$(document).ready(function() {
-$(function(){
+$(function() {
+	var arrData = [];
+
+	var myData = $.getJSON('scripts/data.json', function(data){
+		console.log(data);
+
+		$.each(data, function(index,value){
+			console.log("value: " + value);
+			arrData.push(value);
+		});
+
+		return arrData;
+	});
+
+	objQuestions = myData;
+	console.log("data: " + objQuestions);
 
 	loadQuiz();
 
