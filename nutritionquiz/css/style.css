@@ -19,7 +19,7 @@ body {
 }
 
 img {
-	width: 60%;
+	width: 55%;
 	height: 55%;
 	opacity:.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -47,25 +47,22 @@ ul li {
 	width: 7em;
 }
 
-.choices {
+.complete, .choices {
 	color: white;
     position: absolute;
-    bottom: 5em;
     margin-right: 28em;
-    margin-left: 18em;
-    width: 55%;
+    margin-left: 19em;
     text-align: left;
 	font-size: 1.2em;
 }
 
+.choices {
+    bottom: .5em ;
+    width: 65%;
+}
+
 .complete {
-	color: white;
-    position: absolute;
     bottom: 15em;
-    margin-right: 28em;
-    margin-left: 18em;
-    text-align: left;
-    font-size: 1.2em;
     width:55%;
 }
 

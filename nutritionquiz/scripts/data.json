@@ -1,4 +1,4 @@
-{ "data":
+[{ "data":
 	[
 	    {
 	    	"question":"Only one juice is high in iron. Is it ", 
@@ -37,4 +37,4 @@
 	    	"correctAnswer": ["true"]
 	    }
 	]	
-}
+}]
