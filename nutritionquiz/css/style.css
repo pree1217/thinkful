@@ -10,9 +10,8 @@ body {
 	width: 98%;
 	height: 98%;
 	margin: .5em auto;
-	/*font:1.5em 'Merienda One', Helvetica, sans-serif;*/
 	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-	font-size: 14px;
+	font-size: 1.2em;
 	font-weight: bold;
 	font-style: italic;
 	background-color: #5E3C30;
@@ -20,16 +19,16 @@ body {
 }
 
 img {
-	width: 55%;
+	width: 60%;
 	height: 55%;
-	opacity:.8;
+	opacity:.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 ul li {
 	list-style: none;
-	text-align: right;
-	display: inline;
+	text-align: left;
+	line-height: 2em;
 }
 
 .backsplash {
@@ -45,38 +44,50 @@ ul li {
 	padding-left: 2em;
 	padding-right: 2em;
 	background-color:#5E3C30;
+	width: 7em;
 }
 
 .choices {
 	color: white;
     position: absolute;
-    bottom: 7em;
+    bottom: 5em;
     margin-right: 28em;
-    margin-left: 28em;
+    margin-left: 18em;
+    width: 55%;
     text-align: left;
-    font-size: 1em;
+	font-size: 1.2em;
 }
 
 .complete {
 	color: white;
     position: absolute;
     bottom: 15em;
-    margin-right: 20em;
-    margin-left: 28em;
+    margin-right: 28em;
+    margin-left: 18em;
     text-align: left;
+    font-size: 1.2em;
+    width:55%;
 }
 
 .submitAnswer {
     text-align: left;
+    width:7em;
 }
 
 .question {
+	color: white;
 	display: none;
+	width:70%;
+    text-align: left;
+	font-size: 1.2em;
 }
 
 .answer {
 	color:white;
 	margin-right: 20em;
 	margin-left: 20em;
-	font-size: 14px;
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
 }

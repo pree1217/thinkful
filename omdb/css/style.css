@@ -1,0 +1,15 @@
+body {
+	font:1.5em/.3em Georgia, sans-serif;
+	margin-right: 5em;
+	margin-left: 5em;
+	margin-top:3em;
+	text-align: left;
+}
+
+#search-box {
+	padding: .5em;
+	width: 15em;
+	height: 2em;
+	font-size:.5em;
+}
+

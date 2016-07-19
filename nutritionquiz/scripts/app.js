@@ -25,12 +25,6 @@ var objQuestions = [
 	    	"correctAnswer": ["dried figs", "broccoli", "dried beans", "almonds"]
 	    },
 	    {
-	    	"question":"If you're looking for the most fiber in a loaf of bread, the operative words are ", 
-	    	"choices": ["unbleached", "enriched wheat flour","whole-wheat flour","twelve-grain"],
-	    	"answer": "(c) Whole-wheat flour contains the bran and the germ, and thus is rich in vitamins, minerals, and fiber. Wheat flour, whether bleached or unbleached, loses vitamins and minerals when it is refined. Even when it is enriched, only some—not all—of these nutrients are added back in. 'Twelve-grain' or 'seven-grain' may not mean anything, since the bread can still be mostly re-fined wheat ('white') flour. Most rye and pumpernickel contain little or no whole grain",
-	    	"correctAnswer": ["whole-wheat flour"]
-	    },
-	    {
 	    	"question": " Despite some rumors, a lime juice marinade cannot really 'cook' raw fish or shellfish and kill all bacteria.",
 	    	"choices": ["true", "false"],
 	    	"answer": "(True) Lime juice may kill bacteria on the surface of fish or shellfish, but it won't kill any dangerous microorganisms below the surface. Eating raw fish or shellfish marinated in lime juice (ceviche) is risky.",
@@ -77,14 +71,14 @@ function evaluateAnswer(arr,index) {
 function goToNextQuestion() {
 
 	//get selected value
-    var radioValue = $("input[type=checkbox]:checked").val();
-
     //construct an array of 
     var checkedValues = $('input:checkbox:checked').map(function() {
     	return this.value;
-	}).get();//.join(',');
-
+	}).get();//get() converts jquery object into an array
+	//.join(',');
+    
     var guess = evaluateAnswer(checkedValues,elemNo);
+
     if(checkedValues.length > 0){
 
 		$("#question"+elemNo).hide();
@@ -94,6 +88,7 @@ function goToNextQuestion() {
 		elemAnswer.append(objQuestions[elemNo-1].answer);
 		elemNo+=1;
 
+		//last page
 		if (elemNo > numQuestions) {
 			elemChoices.html('');
 			elemComplete.append("Great. You're done!</br>");
@@ -113,14 +108,14 @@ function loadQuiz() {
 		var question = objQuestions[index].question;
 		var choices = objQuestions[index].choices;
 
-		html+="<div class='question' id='question"+elemNo+"'><span>"+question+"</span>";
+		html+="<div class='question' id='question"+elemNo+"'><span>"+question+"</span><ul>";
 		
 		for(var key in choices) {
 			var choice = choices[key];
-			html+="<ul><li><input type='checkbox' id="+key+"-option name='selector' value='"+choice+"'/> "+choice+"</li></ul>";
+			html+="<li><input type='checkbox' id="+key+"-option name='selector' value='"+choice+"'/> "+choice+"</li>";
 		}
 
-		html+="<div class='submitAnswer'><input class='button' type='button' value='Next' onclick='return goToNextQuestion();'</div>";
+		html+="</ul><div class='submitAnswer'><input class='button' type='button' value='Next' onclick='return goToNextQuestion();'</div>";
 		elemChoices.append(html);
 
 		elemNo+=1;
@@ -128,7 +123,8 @@ function loadQuiz() {
 }
 
 /* document load activity */
-$(document).ready(function() {
+//$(document).ready(function() {
+$(function(){
 
 	loadQuiz();
 

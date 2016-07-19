@@ -1,4 +1,4 @@
-[
+{ "data" = [
 	    {
 	    	"question":"Only one juice is high in iron. Is it ", 
 	    	"choices": ["orange", "prune","carrot","apricot"],
@@ -35,4 +35,4 @@
 	    	"answer": "(True) Lime juice may kill bacteria on the surface of fish or shellfish, but it won't kill any dangerous microorganisms below the surface. Eating raw fish or shellfish marinated in lime juice (ceviche) is risky.",
 	    	"correctAnswer": ["true"]
 	    }
-];
+]}
