@@ -10,7 +10,7 @@ var showResults = function(myData) {
 	$("#search-results").html(html);
 }
 
-var getSearchRequest = function(searchTerm){
+var getSearchRequest = function(searchTerm) {
 	//$.getJSON('http://www.omdbapi.com/?s='+searchTerm+'&r=json',function(data){
 	//	showResults(data.Search);
 	//});
@@ -21,9 +21,9 @@ var getSearchRequest = function(searchTerm){
 	};
 	url = 'http://www.omdbapi.com';
 
-	$.getJSON(url,params, function(data){
+	$.getJSON(url,params, function(data) {
 		showResults(data.Search);
-	})
+	});
 }
 
 $(function() {
